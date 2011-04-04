@@ -1,5 +1,5 @@
 %define name	spyder
-%define version 2.0.8
+%define version 2.0.9
 %define release %mkrel 1
 
 Summary:	Scientific Python Development Environment
@@ -18,7 +18,7 @@ Requires:	python-matplotlib-qt4
 Suggests:	pylint, python-numpy, python-scipy
 Suggests:	ipython, python-rope >= 0.9.2, pyflakes >= 0.3.0
 Suggests:	python-matplotlib, pylint
-BuildRequires:	python-sphinx
+BuildRequires:	python-sphinx >= 0.6.0
 %py_requires -d
 
 %description
