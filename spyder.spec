@@ -1,5 +1,5 @@
 %define name	spyder
-%define version 2.0.12
+%define version 2.1.0
 %define release %mkrel 1
 
 Summary:	Scientific Python Development Environment
@@ -55,6 +55,7 @@ embedded in your own PyQt4 application.
 
 %prep
 %setup -q -n %{name}-%{version}
+
 chmod 600 README
 
 %install
