@@ -1,5 +1,5 @@
 %define name	spyder
-%define version 2.1.0
+%define version 2.1.1
 %define release %mkrel 1
 
 Summary:	Scientific Python Development Environment
