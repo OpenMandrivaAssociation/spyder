@@ -1,12 +1,12 @@
 %define name	spyder
-%define version 2.1.3
+%define version 2.1.4
 %define release %mkrel 1
 
 Summary:	Scientific Python Development Environment
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Source0:	%{name}-%{version}.zip
+Source0:	http://spyderlib.googlecode.com/files/%{name}-%{version}.zip
 License:	MIT
 Group:		Development/Python
 Url:		http://spyderlib.googlecode.com/
