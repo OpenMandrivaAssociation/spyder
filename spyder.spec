@@ -1,15 +1,16 @@
 %define name	spyder
 %define version 2.1.9
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Scientific Python Development Environment
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	http://spyderlib.googlecode.com/files/%{name}-%{version}.zip
+Source1:	%name.desktop
 License:	MIT
 Group:		Development/Python
-Url:		http://spyderlib.googlecode.com/
+URL:		http://spyderlib.googlecode.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Requires:	python >= 2.5
@@ -62,6 +63,15 @@ chmod 600 README
 %__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
 
+# adding a launcher
+
+%{__install} -d -m755 %{buildroot}%{_datadir}/applications
+%{__install} -d -m755 %{buildroot}%{_datadir}/pixmaps
+
+%{__install} -m644 %SOURCE1 %buildroot%_datadir/applications
+%{__install} -m644 spyderlib/images/spyder.svg %buildroot%_datadir/pixmaps
+
+
 %clean
 %__rm -rf %{buildroot}
 
@@ -69,3 +79,5 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record
 %defattr(-,root,root)
 %doc README 
 %py_sitedir/spyderlib/doc
+%_datadir/applications/*.desktop
+%_datadir/pixmaps/*.svg
