@@ -1,6 +1,11 @@
 %define name	spyder
-%define version 2.1.9
-%define release %mkrel 2
+%define version 2.1.10
+%define	rel		1
+%if %mdkversion < 201100
+%define release %mkrel %rel
+%else
+%define	release %rel
+%endif
 
 Summary:	Scientific Python Development Environment
 Name:		%{name}
