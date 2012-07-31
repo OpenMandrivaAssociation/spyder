@@ -1,5 +1,5 @@
 %define name	spyder
-%define version 2.1.10
+%define version 2.1.11
 %define	rel		1
 %if %mdkversion < 201100
 %define release %mkrel %rel
