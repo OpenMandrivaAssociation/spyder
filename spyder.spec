@@ -15,7 +15,7 @@ Source0:	http://spyderlib.googlecode.com/files/%{name}-%{version}.zip
 Source1:	%name.desktop
 License:	MIT
 Group:		Development/Python
-URL:		http://spyderlib.googlecode.com/
+URL:		https://spyderlib.googlecode.com/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Requires:	python >= 2.5
